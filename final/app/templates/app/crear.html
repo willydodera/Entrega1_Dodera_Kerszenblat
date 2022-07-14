@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<form action="" method="POST">{% csrf_token %}
+    <h1 class="mt-5 mb-5">Registrate</h1>
+    <table class="m-auto">
+        {{ form.as_table }}
+    </table>
+    <input class="m-3" type="submit" value="Crear Usuario">
+    {% if nombre %}
+    <p>El usuario {{ nombre }} se creo correctamente</p>
+    {% endif %}
+</form>
+{% endblock %}

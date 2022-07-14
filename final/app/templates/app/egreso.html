@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<form action="" method="POST">{% csrf_token %}
+    <h1 class="mt-5 mb-5">Egreso</h1>
+    <table class="m-auto"> 
+        {{ form.as_table }}
+    </table>
+    <input class="m-3" type="submit" value="Enviar">
+    {% if usuario %}
+    <p>Se registró el egreso del usuario</p>
+    {% endif %}
+</form>
+
+{% endblock %}
